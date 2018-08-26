@@ -220,4 +220,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
+  let body = document.getElementsByTagName('body')[0]
+  body.onmousedown = function() {
+    hero.gravity = -0.2
+    render()
+  }
+  body.onmouseup = function() {
+    hero.gravity = 0.05
+    render()
+  }
+
 })
