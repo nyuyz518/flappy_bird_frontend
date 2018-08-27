@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
       )
     }
 
-    fetch('http://localhost:3000/api/v1/scores', config).then(r => r.json()).then(listScores)
+    fetch('https://flappy-bird-backend.herokuapp.com/api/v1/scores', config).then(r => r.json()).then(listScores)
   }
 
   const parseScores = function(array) {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const listScores = function() {
-    fetch('http://localhost:3000/api/v1/scores').then(r => r.json()).then(array => parseScores(array)).then(array => renderScores(array))
+    fetch('https://flappy-bird-backend.herokuapp.com/api/v1/scores').then(r => r.json()).then(array => parseScores(array)).then(array => renderScores(array))
   }
 
   const makeLi = function(scoreObj) {
